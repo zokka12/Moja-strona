@@ -22,6 +22,7 @@ figure{
 }
 section{
   padding: 70px 0;
+  overflow: hidden;
 }
 .section-dark{
     background-color: #0a2239;
@@ -81,16 +82,21 @@ header{
 .menu {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 150px;
+  margin-bottom: 30px;
 }
+
 .menu-list {
   display: none;
   list-style: none;
+}
+.hidden {
+  display: none;
 }
 
 .menu-list-link {
   color: #fff;
   font-size: 18px;
+  margin: 12px;
 }
 .menu-list-link:hover {
   color: #53a2be;
@@ -116,14 +122,38 @@ header{
   background-color: #53a2be;
   color: #0a2239;
 }
+.close-menu svg {
+  fill: #fff;
+  width: 30px;
+  height: 30px;
+}
+.close-menu {
+  display: none;
+}
+.opened {
+  display: block;
+}
+
+nav {
+  text-align: right;
+}
 @media screen and (min-width: 768px) {
-  .menu-list{
+  h1 {
+    font-size: 100px;
+  }
+  .close-menu {
+    display: none;
+  }
+  .menu {
+    margin-bottom: 150px;
+  }
+  .menu-list {
     display: flex;
     gap: 20px;
   }
-  .burger-menu{
+  .burger-menu {
     display: none;
-  }  
+  }
 }
 
 
@@ -397,10 +427,14 @@ textarea {
   height: 40px;
 }
 @media screen and (max-width: 768){
-  .footer-wraper{
+  .footer-bootom-wrapper {
     display: flex;
     justify-content: space-between;
-    text-align: center;
+    align-items: center;
   }
 
+  .footer-text p:last-child {
+    margin-bottom: 0;
+  }
 }
+
